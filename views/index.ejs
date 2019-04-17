@@ -8,5 +8,13 @@
 </head>
 <body>
     <h1>All the starwars characters ever to infinity and beyond</h1>
+    <ul class = starwarsCharacters>
+    <%for(let i = 0; i < characters.length; i++){%>
+        <li><a href = "<%=characters[i]._id%>"><%=characters[i].name%></a></li>
+    <%}%>
+    </ul>
+    <form action="/starwars/new" method="GET">
+        <button type="submit">Create new character</button>
+    </form>
 </body>
 </html>
