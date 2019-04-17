@@ -5,10 +5,13 @@ const morgan = require('morgan');
 const app =express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const router = require('./controllers/starwars')
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 app.use(morgan('short'));
+app.use('/starwars', router);
+
 
 
 
